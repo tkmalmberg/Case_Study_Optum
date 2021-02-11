@@ -15,9 +15,31 @@
         first element in the source code.
       </div>
     </header>
+    <br>
+    <div>
+      getElementsByName() will also return elements that have an id attribute
+      with the specified value. For compatibility, you should be careful not to
+      use the same string as both a name and an ID.
+    </div>
+    <ul id="items" class="list-group">
+      <li name="list-group-item">Item 1</li>
+      <li name="list-group-item">Item 2</li>
+      <li name="list-group-item">Item 3</li>
+    </ul>
+
     <script>
+      // Returns 1 element because of the ID tag
       var header = document.getElementById("header-title");
+      // Returns however many elements that have the same tag
+      var items = document.getElementsByName("list-group-item");
+
       console.log(header);
+
+      // 'in' will iterate through all of the propeties
+      // 'of' will iterate through the items
+      for (i in items) {
+        console.log(items[i]);
+      }
     </script>
   </body>
 </html>

@@ -86,35 +86,55 @@
 
       // Q9
 
-      function House(symbol) {
-        this.symbol = symbol;
-        this.lord = undefined;
-      }
-      function Person(name) {
-        this.name = name;
-        this.children = null;
-        this.parent = null;
-      }
-      Lannister = new House("lion");
-      Tywin = new Person("Tywin");
-      Tyrion = new Person("Tyrion");
-      Cersi = new Person("Cersi");
-      Jamie = new Person("Jamie");
-      Joffery = new Person("Joffery");
-      Myrcella = new Person("Myrcella");
-      Tomme = new Person("Tomme");
-      Joffery.House = Lannister;
-      Myrcella.House = Lannister;
-      Tomme.House = Lannister;
-      Lannister.lord = Tywin;
-      Tywin.children = [Jamie, Cersi, Tyrion];
-      Jamie.parent = Tywin;
-      Cersi.parent = Tywin;
-      Tyrion.parent = Tywin;
+      // function House(symbol) {
+      //   this.symbol = symbol;
+      //   this.lord = undefined;
+      // }
+      // function Person(name) {
+      //   this.name = name;
+      //   this.children = null;
+      //   this.parent = null;
+      // }
+      // Lannister = new House("lion");
+      // Tywin = new Person("Tywin");
+      // Tyrion = new Person("Tyrion");
+      // Cersi = new Person("Cersi");
+      // Jamie = new Person("Jamie");
+      // Joffery = new Person("Joffery");
+      // Myrcella = new Person("Myrcella");
+      // Tomme = new Person("Tomme");
+      // Joffery.House = Lannister;
+      // Myrcella.House = Lannister;
+      // Tomme.House = Lannister;
+      // Lannister.lord = Tywin;
+      // Tywin.children = [Jamie, Cersi, Tyrion];
+      // Jamie.parent = Tywin;
+      // Cersi.parent = Tywin;
+      // Tyrion.parent = Tywin;
 
-      console.log(Lannister);
-      console.log(Tywin);
-      console.log(Cersi);
+      // console.log(Lannister);
+      // console.log(Tywin);
+      // console.log(Cersi);
+
+      // Q10
+
+      function Day(year, month, day) {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+      }
+      function getDaysinMonth(year, month) {
+        var arr = [];
+        var num_days = new Date(year, month, 0).getDate();
+        for (var i = 0; i<num_days; i++){
+          arr.push(new Day(year, month, i));
+        }
+        return arr;
+      }
+
+      console.log(getDaysinMonth(2021, 7));
+
+
 
     </script>
   </head>
