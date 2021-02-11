@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var scope = "global";
+        function checkScope() {
+            // Local scope takes presedence over global
+            var scope = "local";
+            function nestScope() {
+                // Scope rules continue to apply the deeper you go.
+                var scope = "nested";
+                return scope;
+            }
+            return scope;
+        }
+
+        var result = checkScope();
+        // But when outside of the function, "scope" cannot access the var in the function
+        console.log(scope);
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

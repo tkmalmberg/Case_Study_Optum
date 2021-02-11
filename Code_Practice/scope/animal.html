@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var Animal = function (name, type) {
+        (this.kind = name), (this.breed = type);
+      };
+
+      var playground = {
+        animals: [],
+
+        addAnimal(animal) {
+          this.animals.push(animal);
+        },
+
+        listAnimalKind(kind) {
+          this.animals.forEach(function (animal) {
+            if (animal.kind == kind) {
+              console.log(animal.breed);
+            }
+          });
+        },
+      };
+
+      playground.addAnimal(new Animal("dog", "Labrador"));
+      playground.addAnimal(new Animal("dog", "Goldren Retriever"));
+      playground.addAnimal(new Animal("rabbit", "Angola"));
+      playground.listAnimalKind("dog");
+    </script>
+  </head>
+  <body></body>
+</html>

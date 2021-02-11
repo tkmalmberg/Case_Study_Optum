@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // Q3
+      //   var Hero = function(name) {
+      //       this.name = name;
+      //   }
+
+      //   myHero = new Hero("Link");
+      //   console.log(myHero.name);
+
+      // Q4
+      //   function person(first, last, age, eye) {
+      //     this.firstName = first;
+      //     this.lastName = last;
+      //     this.age = age;
+      //     this.eyeColor = eye;
+      //   }
+      //   var myFather = new person("John", "Doe", 50, "blue");
+      //   var myMother = new person("Sally", "Rally", 48, "green");
+      //   var myself = new person("Tyler", "Malmberg", 23, "Blue");
+
+      // Q5
+
+      //   var Song = function(title, artist) {
+      //       this.title = title;
+      //       this.artist = artist;
+
+      //       Song.prototype.play = function() {
+      //         console.log("Playing: " + this.title);
+      //       }
+      //   };
+
+      //   var song1 = new Song("Time", "Pink Floyd");
+      //   var song2 = new Song("Sweet Life", "Frank Ocean");
+      //   var song3 = new Song("Intro", "M83");
+      //   var song4 = new Song("Bloom", "ODESZA");
+      //   var song5 = new Song("The Less I Know The Better", "Tame Impala");
+
+      //   song4.play(); //logs 'Bloom'
+      //   song2.play(); //logs 'Playing: Sweet Life'
+      //   song3.play(); //logs 'Playing: Intro'
+
+      // Q6
+
+      //   function car(brand, name, year, price) {
+      //     this.brand = brand;
+      //     this.name = name;
+      //     this.year = year;
+      //     this.price = price;
+      //   }
+
+      //   var car1 = new car("Toyota", "Highlander", 2004, 10000);
+      //   var car2 = new car("Honda", "Civic", 2015, 20000);
+      //   var car3 = new car("Audi", "Fastboi", 2021, 100000);
+
+      // Q7
+      //   var Hero = function (name, occupation) {
+      //     this.name = name;
+      //     this.occupation = occupation;
+
+      //     Hero.prototype.whoAreYou = function () {
+      //       console.log("My name is", this.name, "and I am a", this.occupation);
+      //     };
+      //   };
+
+      //   var mike = new Hero("Michaelangello", "Ninja");
+      //   mike.whoAreYou();
+
+      // Q8
+
+      // function arrayString(array) {
+      //     this.array = array;
+      //     this.str = array.join("")
+      //     return this.str;
+      // }
+
+      // var joined = new arrayString(['d','o','g']);
+      // console.log(joined);
+
+      // Q9
+
+      function House(symbol) {
+        this.symbol = symbol;
+        this.lord = undefined;
+      }
+      function Person(name) {
+        this.name = name;
+        this.children = null;
+        this.parent = null;
+      }
+      Lannister = new House("lion");
+      Tywin = new Person("Tywin");
+      Tyrion = new Person("Tyrion");
+      Cersi = new Person("Cersi");
+      Jamie = new Person("Jamie");
+      Joffery = new Person("Joffery");
+      Myrcella = new Person("Myrcella");
+      Tomme = new Person("Tomme");
+      Joffery.House = Lannister;
+      Myrcella.House = Lannister;
+      Tomme.House = Lannister;
+      Lannister.lord = Tywin;
+      Tywin.children = [Jamie, Cersi, Tyrion];
+      Jamie.parent = Tywin;
+      Cersi.parent = Tywin;
+      Tyrion.parent = Tywin;
+
+      console.log(Lannister);
+      console.log(Tywin);
+      console.log(Cersi);
+
+    </script>
+  </head>
+  <body></body>
+</html>
