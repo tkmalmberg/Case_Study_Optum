@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var formula = [100, "+", 50, "-", 25, "+", 0, "+", 123, "-", 1];
+      var result = formula[0];
+
+      for (let i = 1; i < formula.length; i += 2) {
+        if (formula[i] === "+") {
+          result = result + formula[i + 1];
+          console.log(result);
+        } else if (formula[i] === "-") {
+          result = result - formula[i + 1];
+          console.log(result);
+        } else {
+            break;
+        }
+      }
+
+      console.log("Final Result: " + result);
+
+    </script>
+  </head>
+  <body></body>
+</html>

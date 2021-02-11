@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Checker:</h1>
+
+    <form>
+      Height: <input type="number" id="height" /> <br />
+      Width: <input type="number" id="width" />
+    </form>
+
+    <button onclick="myFunction()">Get Checker</button>
+    <pre id="shape"></pre>
+
+    <script>
+      function checker(h, w) {
+        var i, j;
+        document.write("<pre>");
+        for (i = 0; i < h; i++) {
+          for (j = 0; j < w; j++) {
+            if (i % 2 === 0) {
+              if (j % 2 === 0) {
+                document.write("*");
+              } else {
+                document.write(" ");
+              }
+            } else {
+              if (j % 2 === 0) {
+                document.write(" ");
+              } else {
+                document.write("*");
+              }
+            }
+          }
+          document.write("<br>");
+        }
+        document.write("</pre>");
+      }
+      function myFunction() {
+        checker(
+          document.getElementById("height").value,
+          document.getElementById("width").value
+        );
+      }
+    </script>
+  </body>
+</html>

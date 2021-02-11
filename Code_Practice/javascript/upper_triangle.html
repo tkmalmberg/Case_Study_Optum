@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Upper Triangle Shape:</h1>
+
+    <form>Size: <input type="number" id="size" /> <br /></form>
+
+    <button onclick="myFunction()">Get X</button>
+    <p id="shape"></p>
+
+    <script>
+      function box(s) {
+        document.write("<pre>");
+        var i, j;
+        var count;
+        for (i = 0; i < s; i++) {
+          for (j = 0; j < s; j++) {
+              if (j >= i) {
+                document.write("*");
+              } else {
+                  document.write(" ");
+              }
+          }
+          document.write("<br>");
+        }
+        document.write("</pre>");
+      }
+
+      function myFunction() {
+        box(document.getElementById("size").value);
+      }
+    </script>
+  </body>
+</html>

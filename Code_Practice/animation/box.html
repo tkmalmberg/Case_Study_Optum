@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  0%   {top: 0px; left: 0px; background: red;}
+  25%  {top: 0px; left: 100px; background: blue;}
+  50%  {top: 100px; left: 100px; background: yellow;}
+  75%  {top: 100px; left: 0px; background: green;}
+  100% {top: 0px; left: 0px; background: red;}
+}
+</style>
+</head>
+<body>
+
+<h1>The @keyframes Rule</h1>
+
+<p><strong>Note:</strong> The @keyframes rule is not supported in Internet Explorer 9 and earlier versions.</p>
+
+<div></div>
+
+</body>
+</html>

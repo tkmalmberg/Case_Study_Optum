@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+}
+
+#loginForm {
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(255, 207, 134);
+    box-shadow: 3px 3px 3px grey;
+}
+
+.field {
+    text-align: center;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 6px;
+}
+
+#loginBut {
+    background-color: rgb(201, 68, 68);
+    margin-top: 5px;
+    padding: 5px;
+}

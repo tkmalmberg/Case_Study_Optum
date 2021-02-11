@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //let input = prompt("Enter a Number:");
+
+      function inputNumber() {
+          let n = "";
+          while (!isItNumber(n)) {
+              n = prompt("Enter a Number");
+          }
+          return n;
+      }
+
+      function inputManyNumbers() {
+          let numbers = []
+          let n = "";
+          let temp = 0;
+          while (!isItNumber(n)) {
+              n = prompt("Enter a Number, Enter N to finish: ");
+              if (n === "n" || n === "N") { break; }
+              temp = convertToNumber(n);
+              numbers.push(temp);
+          }
+          return numbers;
+      }
+
+      function isItNumber(n) {
+        let regex = /^[0-9]+$/;
+        if (!n.match(regex)) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function convertToNumber(n) {
+          n = parseInt(n);
+          return n;
+      }
+
+      function smaller() {
+        let a = inputNumber();
+        let b = inputNumber();
+
+        if (a < b) {
+            console.log(a + " is smaller than " + b);
+        } else if (b < a) {
+            console.log(b + " is smaller than " + a);
+        } else {
+            console.log("The inputs are equal");
+        }
+      }
+
+      function smallest() {
+          nums = inputManyNumbers();
+          currentSmallest = nums[0];
+          
+          for (let i = 1; i < nums.length; i++) {
+              if (currentSmallest > nums[i]) {
+                  currentSmallest = nums[i];
+              }
+          }
+
+          return currentSmallest;
+      }
+
+      //console.log(isItNumber(input));
+      smallest();
+
+    </script>
+  </head>
+  <body></body>
+</html>

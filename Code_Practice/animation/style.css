@@ -1,0 +1,30 @@
+#track {
+    border: 2px solid purple;
+    margin: 50px;
+    height: 400px;
+    width: 400px;
+}
+
+#box {
+    position: relative;
+    background-color: aqua;
+    height: 50px;
+    width: 50px;
+    bottom: 25px;
+    right: 25px;
+    -webkit-animation-name: box;
+    animation-name: box;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation-duration: 4s;
+    animation-direction:normal;
+}
+
+@keyframes box {
+    0% {left: -25px; top: -25px;}
+    25%{left: 375px; top: -25px;}
+    50%{left: 375px; top: 375px;}
+    75%{left: -25px; top: 375px;}
+    100%{left: -25px; top: -25px;}
+}

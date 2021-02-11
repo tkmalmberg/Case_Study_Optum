@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Trapezoid:</h1>
+
+    <form>
+      Width: <input type="number" id="width" /><br />
+      Height: <input type="number" id="height" />
+    </form>
+
+    <button onclick="myFunction()">Get Box</button>
+    <p id="shape"></p>
+
+    <script>
+      function box(h, w) {
+        var i, j;
+        var lSide = 0;
+        var rSide = w;
+
+        if (w / h >= 2) {
+          document.write("<pre>");
+          for (i = 0; i < h; i++) {
+            for (j = 0; j < w; j++) {
+              if (j >= lSide && j < rSide) {
+                document.write("*");
+              } else {
+                document.write(" ");
+              }
+            }
+            document.write("<br>");
+            lSide++;
+            rSide--;
+          }
+          document.write("</pre>");
+        } else {
+          document.write("<h1>Impossible Shape</h1>");
+        }
+      }
+      function myFunction() {
+        box(
+          document.getElementById("height").value,
+          document.getElementById("width").value
+        );
+      }
+    </script>
+  </body>
+</html>
