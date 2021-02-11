@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hidden Menu</h1>
+    <button>Click me</button>
+    <p></p>
+    <script>
+      // Function to modify the text content of the paragraph
+      var counter = 1;
+      var button = document.querySelector('button');
+      
+      const changeText = () => {
+        const p = document.querySelector("p");
+        p.textContent = "Menu Item " + counter;
+        counter++;
+        button.a;
+      };
+      button.addEventListener('click', changeText);
+    </script>
+  </body>
+</html>
