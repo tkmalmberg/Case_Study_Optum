@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var uniqueInteger = function() {
+            var counter = 0;
+            function inner() {
+                counter++;
+                return counter;
+            }
+            return inner
+        }
+
+        // This is calling functions from a built object 
+        // with saved variables, causing 'counter' to 
+        // increment every time it gets stored
+        my_counter = uniqueInteger();
+        console.log(my_counter()); // counter === 1
+        console.log(my_counter()); // counter === 2
+        console.log(my_counter()); // counter === 3
+
+        // Since we are not saving the data in an object,
+        // 'counter' is "reset" every single time
+        console.log(uniqueInteger()()); // counter === 1
+        console.log(uniqueInteger()()); // counter === 1
+        console.log(uniqueInteger()()); // counter === 1
+
+        // OUTPUT:
+        // 1 
+        // 2 
+        // 3 
+        // 1 
+        // 1 
+        // 1 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
