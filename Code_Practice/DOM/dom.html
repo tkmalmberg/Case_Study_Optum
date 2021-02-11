@@ -15,23 +15,52 @@
         first element in the source code.
       </div>
     </header>
-    <br>
+    <br />
     <div>
       getElementsByName() will also return elements that have an id attribute
       with the specified value. For compatibility, you should be careful not to
       use the same string as both a name and an ID.
     </div>
     <ul id="items" class="list-group">
-      <li name="list-group-item">Item 1</li>
-      <li name="list-group-item">Item 2</li>
-      <li name="list-group-item">Item 3</li>
+      <li class="list-group-item">Item 1</li>
+      <li class="list-group-item">Item 2</li>
+      <li class="list-group-item">Item 3</li>
+    </ul>
+    <br />
+    <p id="main">
+      <b id="selectorID"> The Document method querySelector()</b> returns the
+      first Element within the document that matches the specified selector, or
+      group of selectors,
+      <b class="selectorClass">this must be valid CSS syntax</b>, or a
+      SyntaxError exception will occur. Elements can be described by
+      <u>ID, tag name, or class</u>
+    </p>
+
+    <br />
+    <h1>Root Nodes</h1>
+    <ul>
+      <li>document</li>
+      <li>document.documentElement</li>
+      <li>document.head</li>
+      <li>document.body</li>
+    </ul>
+
+    <br />
+
+    <h1>Parent Nodes</h1>
+    <ul>
+      <li>
+        Node.parentNode:The parent of an element is an Element node, a Document
+        node, or a DocumentFragment node
+      </li>
+      <li>Node.parentElement:This is always a DOM Element object, or null</li>
     </ul>
 
     <script>
       // Returns 1 element because of the ID tag
       var header = document.getElementById("header-title");
       // Returns however many elements that have the same tag
-      var items = document.getElementsByName("list-group-item");
+      var items = document.getElementsByClassName("list-group-item");
 
       console.log(header);
 
@@ -40,6 +69,32 @@
       for (i in items) {
         console.log(items[i]);
       }
+      console.log(items);
+
+      // Elements can also be selected based on their CSS Selector
+      // This selector will only give you one element
+      var selectorID = document.querySelector("#selectorID");
+      console.log(selectorID);
+      var selectorClass = document.querySelector(".selectorClass");
+      console.log(selectorClass);
+      var selectorTag = document.querySelector("u");
+      console.log(selectorTag);
+
+      // The difference between QuerySelectorAll and GetElementByClassName
+      var gebc = document.getElementsByClassName("list-group-item");
+      console.log(gebc);
+      var query = document.querySelectorAll(".list-group-item");
+      console.log(query);
+
+      // Console can print out the element tags and structures
+      console.log(document);
+      console.log(document.documentElement);
+      console.log(document.head);
+      console.log(document.body.children);
+
+      // This returns the Parent Nodes of an element
+      console.log(document.querySelector("ul").parentNode);
+      console.log(document.querySelector("li").parentNode);
     </script>
   </body>
 </html>
