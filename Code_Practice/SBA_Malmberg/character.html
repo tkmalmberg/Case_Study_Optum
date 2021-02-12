@@ -7,13 +7,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <style>
-      .col-sm {
-        background-color: #484746;
-        color: white;
-      }
-    </style>
-
+    <script defer src="js/character.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -32,7 +26,7 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html"
               >Home <span class="sr-only">(current)</span></a
             >
@@ -51,97 +45,57 @@
               >Characters</a
             >
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="character.html">Add Character</a>
+              <a class="dropdown-item active" href="character.html"
+                >Add Character</a
+              >
               <!-- <a class="dropdown-item" href="#">Action 2</a> -->
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
+        </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid">
-      <h1>Welcome to INITiative</h1>
-      <br />
-    </div>
-    <div class="imgContainer">
-      <img
-        src="img/maxresdefault.jpg"
-        alt="Valiant warriors in the heat of battle"
-      />
+    <div class="container">
+      <h1>Create a Character</h1>
+      <div class="form-group" id="charForm">
+        <label for="charName">Character Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="charName"
+          id="charName"
+          aria-describedby="helpId"
+          placeholder=""
+        />
+        <br />
+        
+        <label for="raceSelect">Race</label>
+            <select class="form-control" id="raceSelect"> </select>
+        <br>
+        <label for="classSelect">Class</label>
+            <select class="form-control" id="classSelect"></select>
+        <br>
+        <button type="submit" class="btn btn-primary" id="createButton">Create</button>
     </div>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <h3>What is Dungeons and Dragons?</h3>
-          <p>
-            Dungeons & Dragons (commonly abbreviated as D&D or DnD) is a fantasy
-            tabletop role-playing game (RPG) originally designed by Gary Gygax
-            and Dave Arneson. It was first published in 1974 by Tactical Studies
-            Rules, Inc. (TSR). It has been published by Wizards of the Coast
-            (now a subsidiary of Hasbro) since 1997. The game was derived from
-            miniature wargames, with a variation of the 1971 game Chainmail
-            serving as the initial rule system. D&D's publication is commonly
-            recognized as the beginning of modern role-playing games and the
-            role-playing game industry. <br />
-            -- Wikipedia
-          </p>
-        </div>
-      </div>
-    </div>
-    <br />
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm">
-          <h3>What is this?</h3>
-          <p>
-            This is a combat tracker designed for Dungeons and Dragons Fifth
-            Edition.
-          </p>
-        </div>
-        <div class="col-sm">
-          <h3>Why does this exist?</h3>
-          <p>
-            Sometimes combat can get hectic, the more we can keep track of for
-            you, the more can give to your players in fun storytelling.
-          </p>
-        </div>
-        <div class="col-sm">
-          <h3>Who are you?</h3>
-          Just some guy that likes D&D a lot.
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <br />
-    </div>
-    <table
-      class="table"
-      style="background-color: #ffe599; border: 2px solid #484746"
-    >
-      <thead>
-        <tr>
-          <th>This is</th>
-          <th>a Basic</th>
-          <th>HTML Table</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td scope="row">I couldn't</td>
-          <td>think of</td>
-          <td>an implementation</td>
-        </tr>
-        <tr>
-          <td scope="row">that wouldn't</td>
-          <td>Take 2 hours</td>
-          <td>To work out</td>
-        </tr>
-      </tbody>
+    <table class="charTable">
+        <thead>
+            <tr>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
     </table>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

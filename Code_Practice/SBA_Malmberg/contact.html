@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">INITiative</a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="combat.html">Combat Tracker</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Characters</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item active" href="character.html"
+                  >Add Character</a
+                >
+                <!-- <a class="dropdown-item" href="#">Action 2</a> -->
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <div class="container">
+        <h1>Contact Us</h1>
+        <div class="form-group" id="contactForm">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="charName"
+            id="charName"
+            aria-describedby="helpId"
+            placeholder=""
+          />
+          <br />
+          
+          <label for="topicSelect">Topic</label>
+              <select class="form-control" id="topicSelect">
+                  <option>Select an option...</option>
+                  <option>Bug fix</option> 
+                  <option>New feature</option>
+                  <option>Just chatting</option>
+                </select>
+          <br>
+          <div class="form-group">
+            <label for="textForm"></label>
+            <textarea class="form-control" name="textForm" id="textForm" rows="3" placeholder="Comments"></textarea>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+      </div>
+</body>
+</html>
