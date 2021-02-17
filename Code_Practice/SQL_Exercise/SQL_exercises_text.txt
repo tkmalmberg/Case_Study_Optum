@@ -1,0 +1,50 @@
+Q1 ---
+
+USE classicmodels;
+
+SELECT productName, productLine, buyPrice 
+FROM products
+ORDER BY buyPrice DESC;
+
+Q2 ---
+
+USE classicmodels;
+
+SELECT contactFirstName, contactLastName, city 
+FROM customers
+ORDER BY contactLastName ASC;
+
+Q3 ---
+
+USE classicmodels;
+
+SELECT DISTINCT status
+FROM orders
+ORDER BY status ASC;
+
+Q4 ---
+
+USE classicmodels;
+
+SELECT customerNumber, checkNumber, paymentDate, amount
+FROM payments
+WHERE paymentDate >= '2005-01-01'
+ORDER BY paymentDate ASC;
+
+Q5 ---
+
+USE classicmodels;
+
+SELECT lastName, firstName, email, jobTitle, city
+FROM employees, offices
+WHERE city='San Francisco'
+ORDER BY lastName ASC;
+
+Q6 --- 
+
+USE classicmodels;
+
+SELECT productName, productLine, productScale, productVendor
+FROM products
+WHERE productLine='Classic Cars' OR productLine='Vintage Cars'
+ORDER BY productLine DESC;
