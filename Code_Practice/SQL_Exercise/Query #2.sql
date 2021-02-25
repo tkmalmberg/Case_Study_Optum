@@ -53,3 +53,19 @@ FROM course c
         ON c.id = sc.courseId
 GROUP BY c.name
 ORDER BY AVG (sc.progress) DESC
+
+SELECT f.firstname AS "First Name", f.lastname AS "Last Name", ROUND(AVG(sc.progress), 1) AS "Average Progress"
+FROM faculty f
+    LEFT JOIN facultyCourse fc
+        ON f.id = fc.facultyId
+    LEFT JOIN studentCourse sc
+        ON fc.courseId = sc.courseId
+GROUP BY f.id
+HAVING AVG(sc.progress)>0.9*(SELECT ROUND(AVG(progress), 1)
+                                FROM studentCourse sc
+                                    JOIN course c
+                                        ON c.id = sc.courseId
+                                GROUP BY sc.courseId
+                                ORDER BY 1 DESC
+                                LIMIT 1)
+ORDER BY 3 DESC, 1, 2;
