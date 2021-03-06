@@ -47,6 +47,10 @@ public class bundle1 {
         reverse();
         System.out.println("\n-------------------------");
         dupes();
+        System.out.println("\n-------------------------");
+        secondLargest();
+        System.out.println("\n-------------------------");
+        secondSmallest();
     }
 
     public static int sumArray(int[] arr) {
@@ -198,5 +202,37 @@ public class bundle1 {
             System.out.print(j + " ");
         }
     }
+
+    public static void secondLargest() {
+        int[] my_array ={25,14,56,15,36,56,77,18,29,49};
+        int size = my_array.length;
+        int value = 0;
+
+        Arrays.sort(my_array);
+
+        for (int i = 0; i < size ; i++) {
+            if (my_array[i] != my_array[size - 1]) {
+                value = my_array[i];
+            }
+        }
+        System.out.println("The second largest value is " + value);
+    }
+
+    public static void secondSmallest() {
+        int[] my_array ={25,14,56,15,36,56,77,18,29,49};
+        int size = my_array.length;
+        int value = 0;
+
+        Arrays.sort(my_array);
+
+        for (int i = size - 2; i >=0; i--) {
+            if (my_array[i] != my_array[0]) {
+                value = my_array[i];
+            }
+        }
+        System.out.println("The second smallest value is " + value);
+    }
+
+
 
 }
